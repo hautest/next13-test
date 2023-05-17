@@ -1,3 +1,4 @@
+import Providers from "@/component/Provider";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <h1>Todo List</h1>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

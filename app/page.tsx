@@ -1,5 +1,5 @@
-import { ClientComponent } from "@/component/ClientComponent";
+import { TodoList } from "@/component/TodoList";
 
-export default function Home() {
-  return <ClientComponent />;
+export default async function Home() {
+  return <TodoList />;
 }
