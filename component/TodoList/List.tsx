@@ -14,13 +14,15 @@ export const List = async () => {
   const data = await getQueryClient().fetchQuery(["todos"], getTodos);
 
   return (
-    <ul>
-      {data?.map((todo) => (
-        <li key={todo.id}>
-          {todo.content}
-          <DeleteButton id={todo.id} />
-        </li>
-      ))}
-    </ul>
+    <main>
+      <ul>
+        {data?.map((todo) => (
+          <li key={todo.id}>
+            {todo.content}
+            <DeleteButton id={todo.id} />
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 };

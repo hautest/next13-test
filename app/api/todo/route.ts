@@ -19,7 +19,8 @@ export async function POST(req: Request) {
 }
 
 export async function DELETE() {
-  const res = await prisma.todo.deleteMany();
+  console.log(11222);
+  const res = await prisma.todo.deleteMany({});
 
   return NextResponse.json(res);
 }

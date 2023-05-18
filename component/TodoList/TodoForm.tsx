@@ -22,9 +22,11 @@ export const TodoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input ref={inputRef} />
-      <button>버튼</button>
-    </form>
+    <header>
+      <form onSubmit={handleSubmit}>
+        <input ref={inputRef} />
+        <button>버튼</button>
+      </form>
+    </header>
   );
 };
