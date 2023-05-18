@@ -18,7 +18,7 @@ export const List = async () => {
       {data?.map((todo) => (
         <li key={todo.id}>
           {todo.content}
-          <DeleteButton />
+          <DeleteButton id={todo.id} />
         </li>
       ))}
     </ul>

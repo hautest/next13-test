@@ -1,13 +1,11 @@
 "use client";
 
-export const DeleteButton = () => {
-  return (
-    <button
-      onClick={() => {
-        console.log("click");
-      }}
-    >
-      삭제
-    </button>
-  );
+import { deleteTodo } from "@/api/todo";
+
+interface DeleteButtonProps {
+  id: number;
+}
+
+export const DeleteButton = ({ id }: DeleteButtonProps) => {
+  return <button onClick={() => deleteTodo(id)}>삭제</button>;
 };
