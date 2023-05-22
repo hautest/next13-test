@@ -1,7 +1,6 @@
 import { Todo } from "@prisma/client";
-import { DeleteButton } from "./DeleteButton";
 import getQueryClient from "@/utils/getQueryClient";
-import { CheckBox } from "./CheckBox";
+import { TodoItem } from "./TodoItem";
 
 const getTodos = async () => {
   const res = await fetch("http://localhost:3000/api/todo", {
@@ -18,11 +17,7 @@ export const List = async () => {
     <main>
       <ul>
         {data?.map((todo) => (
-          <li key={todo.id}>
-            <CheckBox checked={todo.completed} id={todo.id} />
-            {todo.content}
-            <DeleteButton id={todo.id} />
-          </li>
+          <TodoItem key={todo.id} todo={todo} />
         ))}
       </ul>
     </main>

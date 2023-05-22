@@ -24,8 +24,8 @@ export const TodoForm = () => {
   return (
     <header>
       <form onSubmit={handleSubmit}>
-        <input ref={inputRef} />
-        <button>버튼</button>
+        <input className="border-2 border-black rounded" ref={inputRef} />
+        <button className="border-2 border-black rounded">버튼</button>
       </form>
     </header>
   );

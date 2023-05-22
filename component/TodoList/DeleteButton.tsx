@@ -7,5 +7,12 @@ interface DeleteButtonProps {
 }
 
 export const DeleteButton = ({ id }: DeleteButtonProps) => {
-  return <button onClick={() => deleteTodo(id)}>삭제</button>;
+  return (
+    <button
+      className="border-2 border-black rounded"
+      onClick={() => deleteTodo(id)}
+    >
+      삭제
+    </button>
+  );
 };
